@@ -1,6 +1,9 @@
 class Ball{
     constructor(x,y,radius){
-        this.body = Bodies.circle(x,y,radius);
+        var options = {
+            'frictionAir':0.004
+        }
+        this.body = Bodies.circle(x,y,radius,options);
         this.radius=radius;
         World.add(world,this.body);
     }
